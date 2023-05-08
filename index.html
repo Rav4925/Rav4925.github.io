@@ -5,821 +5,544 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="dist/accordion.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   <link type="image/x-icon" href="img/favicon.svg" rel="shortcut icon">
-  <title>Lagoona сеть отелей</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <title>Евклид</title>
 </head>
 
 <body class="body">
-
   <header class="header">
-    <div class="container">
-      <div class="container-logo flex">
-        <a href="#" class="href-reset header-logo">
-          <img src="img/logo.svg" class="header-logo-img" alt="Logoona-сеть отелей">
+    <section class="container container__header">
+      <h1 class="header__h1">Евклид</h1>
+      <div class="flex header__div">
+        <button class="flex btn-reset header__burger">
+          <span class="burger--line"></span>
+          <span class="burger--line"></span>
+          <span class="burger--line"></span>
+        </button>
+        <a href="#" class="href-reset header__logo">
+          <img src="img/logo.svg" class="header__img" alt="Проектные системы Евклид">
         </a>
-        <address class="contacts-addres">
-          <a href="tel:+74953225448" class="href-reset contacts-link">
-            +7 495 322 54 48
-          </a>
-        </address>
-        <a href="#" class="href-reset private-office-link">
-          Личный кабинет
-        </a>
-      </div>
-      <div class="flex section-margin container-nav">
-        <nav class="header-nav">
-          <ul class="flex header-list list-reset">
-            <li class="header-list-item">
-              <a href="#about-us" class="href-reset header-list-link">
+        <nav class="flex nav header__nav">
+          <button class="flex btn-reset header__nav--burger">
+            <span class="burger--line--close"></span>
+            <span class="burger--line--close"></span>
+          </button>
+          <ul class="flex nav__list list-reset">
+            <li class="nav__item">
+              <a tabindex="0" href="#about-us" class="href-reset nav__link">
                 О нас
               </a>
             </li>
-            <li class="header-list-item">
-              <a href="#services" class="href-reset header-list-link">
-                Услуги
+            <li class="nav__item">
+              <a href="#projects" class="href-reset nav__link">
+                Проекты
               </a>
             </li>
-            <li class="header-list-item">
-              <a href="#benefits" class="href-reset header-list-link">
-                Преимущества
+            <li class="nav__item">
+              <a href="#stages" class="href-reset nav__link">
+                Этапы
               </a>
             </li>
-            <li class="header-list-item">
-              <a href="#accommodation" class="href-reset header-list-link">
-                Размещение
+            <li class="nav__item">
+              <a href="#reviews" class="href-reset nav__link">
+                Отзывы
               </a>
             </li>
-            <li class="header-list-item">
-              <a href="#" class="href-reset header-list-link">
-                Блог
-              </a>
-            </li>
-            <li class="header-list-item">
-              <a href="#сontacts" class="href-reset header-list-link">
+            <li class="nav__item">
+              <a href="#contacts" class="href-reset nav__link">
                 Контакты
               </a>
             </li>
           </ul>
         </nav>
-        <div class="border-span"></div>
-        <div>
-          <button class="button header-button btn-reset">
-            Хочу тур
+        <div class="search-open">
+          <button aria-label="Кнопка поиска" class="header__search btn-reset">
+            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="7.56126" height="1.89031"
+                transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black" />
+              <path
+                d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+                stroke="black" stroke-width="2" />
+            </svg>
           </button>
         </div>
-        <div>
-          <button class="button header-button2 btn-reset">
-            Обратный звонок
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
+        <div class="search dissapear">
+          <input class="search--input" type="text" name="search" id="search" placeholder="Что будем искать?">
+          <a href="#search" class="header__search2">
+            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="7.56126" height="1.89031"
+                transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black" />
+              <path
+                d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+                stroke="black" stroke-width="2" />
+            </svg>
+          </a>
+          <div class="search--close">
+            <button class="search--close-btn btn-reset">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8.9541" y="7.30444" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30444)"
+                  fill="#CACACA" />
+                <rect x="7.30469" y="15.5525" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5525)"
+                  fill="#CACACA" />
+                <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2" />
+              </svg>
+            </button>
 
-  <main class="main">
-    <h1 class="visually-hidden">
-      Лагуна
-    </h1>
-    <section class="section-margin special">
-      <div class="container container-special">
-        <h2 class="h2 special-title">
-          Спецпредложение
-        </h2>
-        <div class="flex special-content">
-          <div class="flex special-block">
-            <article class="special-item special-img1">
-              <h3 class="special-content-title">
-                Мальдивские острова
-              </h3>
-              <p class="special-price">
-                от 55 000р
-              </p>
-              <a href="#" class="special-link stroke-rectangle">
-                <p class="more-information-special">
-                  подробнее
-                </p>
-                <svg width="11" height="18" viewbox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="position-for-rectangle stroke-rectangle">
-                  <path d="M1.49998 1.00002L9.27815 8.7782L1.49998 16.5564" stroke="#FFCC66" stroke-width="2" />
-                </svg>
-              </a>
-
-            </article>
-
-            <article class="special-item special-img2">
-              <h3 class="special-content-title">
-                Горящий тур на остров Крит
-              </h3>
-              <p class="special-price">
-                от 30 000р
-              </p>
-              <a href="#" class="special-link stroke-rectangle">
-                <p class="more-information-special">
-                  подробнее
-                </p>
-                <svg width="11" height="18" viewbox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="position-for-rectangle stroke-rectangle">
-                  <path d="M1.49998 1.00002L9.27815 8.7782L1.49998 16.5564" stroke="#FFCC66" stroke-width="2" />
-                </svg>
-              </a>
-            </article>
-          </div>
-          <div class="flex special-block">
-            <article class="special-item item-right special-img3">
-              <h3 class="special-content-title3">
-                Номера категории люкс
-              </h3>
-              <p class="special-price3">
-                от 5000р
-              </p>
-              <a href="#" class="special-link stroke-rectangle ">
-                <p class="more-information-special">
-                  подробнее
-                </p>
-                <svg width="11" height="18" viewbox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="position-for-rectangle stroke-rectangle">
-                  <path d="M1.49998 1.00002L9.27815 8.7782L1.49998 16.5564" stroke="#FFCC66" stroke-width="2" />
-                </svg>
-              </a>
-            </article>
           </div>
         </div>
       </div>
     </section>
-    <section id="about-us" class="about-us">
-      <div class="section-margin container">
-        <h2 class="h2 about-us-tittle">
+  </header>
+  <main class="main">
+    <section class="caorusel">
+      <div class="container caorusel__container">
+        <div class="caorusel__content">
+          <div class="swiper caorusel__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide swiper1"></div>
+              <div class="swiper-slide swiper2"></div>
+              <div class="swiper-slide swiper3"></div>
+            </div>
+            <div class="swiper-pagination caorusel__pagination"></div>
+          </div>
+
+          <h2 class="caorusel__maintext">
+            Проектные решения любой сложности
+          </h2>
+          <p class="caorusel__secondarytext">
+            Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
+          </p>
+          <button class="buttone btn-reset caorusel__button">
+            Заказать расчёт
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="aboutus">
+      <div class="container aboutus__container">
+        <h2 class="aboutus__header" id="about-us">
           О нас
         </h2>
-        <p class="about-us-content">
-          Идейные соображения высшего порядка, а также сложившаяся структура организации влечет за собой процесс
-          внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Идейные соображения
-          высшего порядка, а также дальнейшее развитие различных форм деятельности представляет собой интересный
-          эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Равным образом сложившаяся
-          структура организации требуют определения и уточнения существенных финансовых и административных условий.
+        <p class="aboutus__text">
+          Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда
+          внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности.
+          А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того,
+          что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых
+          концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта предопределяет
+          высокую
+          востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться
+          от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
         </p>
+        <div class="flex example">
+          <div class="example__block example__img1">
+            <div class="flex example__item--part">
+              <p class="example__text--part">
+                Принимая во внимание показатели успешности, перспективное планирование способствует подготовке
+                и реализации новых принципов
+              </p>
+              <button class="btn-reset example__button">
+                Подробнее
+              </button>
+            </div>
+          </div>
+          <div class="example__block example__block2">
+            <article class="example__item example__img2">
+              <div class="example__item--description">
+                <h3 class="example__header">
+                  Консультация с широким активом
+                </h3>
+                <p class="example__text">
+                  А также свежий взгляд на привычные вещи — безусловно открывает новые горизонты
+                  для как самодостаточных,
+                  так и внешне зависимых концептуальных решений
+                </p>
+              </div>
+            </article>
+            <article class="example__item example__img3">
+              <div class="example__item--description">
+                <h3 class="example__header">
+                  В своём стремлении повысить
+                </h3>
+                <p class="example__text">
+                  Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный
+                  эксперимент проверки прогресса профессионального сообщества
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="services" class="services">
-      <div class="section-margin container services-container">
-        <h2 class="h2 special-title">
-          Услуги
+    <section class="howwework">
+      <div class="container howwework__container">
+        <h2 class="howwework__header">
+          Как мы работаем
         </h2>
-        <ul class="services-list list-reset">
-          <li class="services-list-item services-img1">
-            <h3>
-              <a href="#" class="services-list-link color-rectangle flex">
-                <span class="more-information-services">
-                  Эксклюзивное обслуживание
-                </span>
-                <svg width="10" height="18" viewbox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="position-for-rectangle">
-                  <path d="M0.778175 1.00002L8.55635 8.7782L0.778175 16.5564" stroke-width="2" />
-                </svg>
-              </a>
-            </h3>
-            <p class="services-list-item-content">
-              Равным образом постоянный количественный рост и сфера нашей активности
-            </p>
+        <ul class="list-reset howwework__list">
+          <li class="howwework__item howwework__item--one">
+            <a href="#firststep" class="href-reset howwework__href howwework__href--active" data-path="one">
+              1 шаг
+            </a>
           </li>
-          <li class="services-list-item services-img2">
-            <h3>
-              <a href="#" class="href-reset services-list-link color-rectangle flex">
-                <span class="more-information-services">
-                  Аренда банкетных залов
-                </span>
-                <svg width="10" height="18" viewbox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="position-for-rectangle">
-                  <path d="M0.778175 1.00002L8.55635 8.7782L0.778175 16.5564" stroke-width="2" />
-                </svg>
-              </a>
-            </h3>
-            <p class="services-list-item-content">
-              Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм.
-            </p>
+          <li class="howwework__item">
+            <a href="#secondstep" class="href-reset howwework__href" data-path="two">
+              2 шаг
+            </a>
           </li>
-          <li class="services-list-item services-img3 services-list-item-down">
-            <h3 class="h3">
-              <a href="#" class="href-reset services-list-link flex color-rectangle">
-                <span class="more-information-services">
-                  Сауны, бассейны, бани, фитнес-залы
-                </span>
-                <svg width="10" height="18" viewbox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="position-for-rectangle">
-                  <path d="M0.778175 1.00002L8.55635 8.7782L0.778175 16.5564" stroke-width="2" />
-                </svg>
-              </a>
-            </h3>
-            <p class="services-list-item-content">
-              Не следует, однако забывать, что начало повседневной работы по формированию позиции
-            </p>
+          <li class="howwework__item">
+            <a href="#thirdstep" class="href-reset howwework__href" data-path="three">
+              3 шаг
+            </a>
           </li>
-          <li class="services-list-item services-img4 services-list-item-down">
-            <h3>
-              <a href="#" class="href-reset services-list-link color-rectangle flex">
-                <span class="more-information-services ">
-                  Охраняемые автомобильные стоянки
-                </span>
-                <svg width="10" height="18" viewbox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="position-for-rectangle">
-                  <path d="M0.778175 1.00002L8.55635 8.7782L0.778175 16.5564" stroke-width="2" />
-                </svg>
-              </a>
-            </h3>
-            <p class="services-list-item-content">
-              Не следует, однако забывать, что начало повседневной работы по формированию позиции
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="benefits" class="benefits">
-      <div class="section-margin container">
-        <h2 class="h2 benifits-title">
-          Преимущества
-        </h2>
-        <ul class="benefits-list list-reset">
-          <li class="benifits-list-item benifits-bacground-img1">
-            <p class="benifits-content">
-              Идейные соображения высшего порядка, а также постоянный количественный рост
-            </p>
-          </li>
-          <li class="benifits-list-item benifits-bacground-img2">
-            <p class="benifits-content">
-              Значимость этих проблем настолько очевидна, что вопрос остается открытым
-            </p>
-          </li>
-          <li class="benifits-list-item benifits-bacground-img3">
-            <p class="benifits-content">
-              Таким образом реализация плановых заданий играет важную роль для понимания
-            </p>
-          </li>
-          <li class="benifits-list-item benifits-bacground-img4">
-            <p class="benifits-content">
-              Повседневная практика показывает, что сложившаяся структура организации
-            </p>
-          </li>
-          <li class="benifits-list-item benifits-down-element benifits-bacground-img5">
-            <p class="benifits-content">
-              Равным образом рамки и место обучения кадров способствует подготовки сотрудника
-            </p>
-          </li>
-          <li class="benifits-list-item benifits-down-element benifits-bacground-img6">
-            <p class="benifits-content">
-              Консультация с активом влечет за собой процесс внедрения услуг нашего сервиса
-            </p>
-          </li>
-          <li class="benifits-list-item benifits-down-element benifits-bacground-img7">
-            <p class="benifits-content">
-              Повседневная практика показывает, что дальнейшее развитие различных форм
-            </p>
-          </li>
-          <li class="benifits-list-item benifits-down-element benifits-bacground-img8">
-            <p class="benifits-content">
-              Значимость этого настолько очевидна, что консультация наших экспертов помогает
-            </p>
-          </li>
-        </ul>
-
-      </div>
-    </section>
-    <section id="accommodation" class="accommodation">
-      <div class="section-margin container">
-        <h2 class="h2 accommodation-title">
-          Размещение
-        </h2>
-        <ul class="accommodation-list list-reset">
-          <li class="accommodation-list-item">
-            <img src="img/23.jpg" alt="Lagoona española" class="accomodation-img-position">
-            <div class="price-position">
-              <p class="accommodation-price">
-                <span class="accommodation-price1">
-                  от
-                </span>
-                <span class="accommodation-price2">
-                  6000р
-                </span>
-                <span class="accommodation-price3">
-                  / ночь
-                </span>
-                <span>
-                  <img src="img/gold-star.svg" alt="рейтинг отеля 4 из 5" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/star.svg" alt="" class="star">
-                </span>
-              </p>
-              <h3 class="accommodation-hotel-name">
-                Lagoona española
-              </h3>
-              <address class="accommodation-city-country">
-                Барселона, Испания
-              </address>
-              <span class="button-position">
-                <button class="button accommodation-button btn-reset">
-                  Номера
-                </button>
-              </span>
-            </div>
-          </li>
-          <li class="accommodation-list-item">
-            <img src="img/24.jpg" alt="Lagoona son típicas">
-            <div class="price-position">
-              <p class="accommodation-price">
-                <span class="accommodation-price1">
-                  от
-                </span>
-                <span class="accommodation-price2">
-                  6000р
-                </span>
-                <span class="accommodation-price3">
-                  / ночь
-                </span>
-                <span>
-                  <img src="img/gold-star.svg" alt="рейтинг отеля 4 из 5" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/star.svg" alt="" class="star">
-                </span>
-              </p>
-              <h3 class="accommodation-hotel-name">
-                Lagoona son típicas
-              </h3>
-              <address class="accommodation-city-country">
-                Барселона, Испания
-              </address>
-              <span class="button-position">
-                <button class="button accommodation-button btn-reset">
-                  Номера
-                </button>
-              </span>
-            </div>
-          </li>
-          <li class="accommodation-list-item">
-            <img src="img/26.jpg" alt="Lagoona de la guerra">
-            <div class="price-position">
-              <p class="accommodation-price">
-                <span class="accommodation-price1">
-                  от
-                </span>
-                <span class="accommodation-price2">
-                  6000р
-                </span>
-                <span class="accommodation-price3">
-                  / ночь
-                </span>
-                <span>
-                  <img src="img/gold-star.svg" alt="рейтинг отеля 5 из 5" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                </span>
-              </p>
-              <h3 class="accommodation-hotel-name">
-                Lagoona de la guerra
-              </h3>
-              <address class="accommodation-city-country">
-                Барселона, Испания
-              </address>
-              <span class="button-position">
-                <button class="button accommodation-button btn-reset">
-                  Номера
-                </button>
-              </span>
-            </div>
-          </li>
-          <li class="accommodation-list-item">
-            <img src="img/29-1.jpg" alt="Lagoona mentira piadosa">
-            <div class="price-position">
-              <p class="accommodation-price">
-                <span class="accommodation-price1">
-                  от
-                </span>
-                <span class="accommodation-price2">
-                  6000р
-                </span>
-                <span class="accommodation-price3">
-                  / ночь
-                </span>
-                <span>
-                  <img src="img/gold-star.svg" alt="рейтинг отеля 5 из 5" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                </span>
-              </p>
-              <h3 class="accommodation-hotel-name">
-                Lagoona mentira piadosa
-              </h3>
-              <address class="accommodation-city-country">
-                Барселона, Испания
-              </address>
-              <span class="button-position">
-                <button class="button accommodation-button btn-reset">
-                  Номера
-                </button>
-              </span>
-            </div>
-          </li>
-          <li class="accommodation-list-item">
-            <img src="img/30.jpg" alt="Lagoona empujar la creatividad">
-            <div class="price-position">
-              <p class="accommodation-price">
-                <span class="accommodation-price1">
-                  от
-                </span>
-                <span class="accommodation-price2">
-                  6000р
-                </span>
-                <span class="accommodation-price3">
-                  / ночь
-                </span>
-                <span>
-                  <img src="img/gold-star.svg" alt="рейтинг отеля 4 из 5" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/star.svg" alt="" class="star">
-                </span>
-              </p>
-              <h3 class="accommodation-hotel-name">
-                Lagoona empujar la creatividad
-              </h3>
-              <address class="accommodation-city-country">
-                Барселона, Испания
-              </address>
-              <span class="button-position">
-                <button class="button accommodation-button btn-reset">
-                  Номера
-                </button>
-              </span>
-            </div>
-          </li>
-          <li class="accommodation-list-item">
-            <img src="img/31.jpg" alt="Lagoona el retorno">
-            <div class="price-position">
-              <p class="accommodation-price">
-                <span class="accommodation-price1">
-                  от
-                </span>
-                <span class="accommodation-price2">
-                  6000р
-                </span>
-                <span class="accommodation-price3">
-                  / ночь
-                </span>
-                <span>
-                  <img src="img/gold-star.svg" alt="рейтинг отеля 4 из 5" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/star.svg" alt="" class="star">
-                </span>
-              </p>
-              <h3 class="accommodation-hotel-name">
-                Lagoona el retorno
-              </h3>
-              <address class="accommodation-city-country">
-                Барселона, Испания
-              </address>
-              <span class="button-position">
-                <button class="button accommodation-button btn-reset">
-                  Номера
-                </button>
-              </span>
-            </div>
-          </li>
-          <li class="accommodation-list-item accommodation-down-element">
-            <img src="img/27.jpg" alt="Lagoona mentira piadosa">
-            <div class="price-position">
-              <p class="accommodation-price">
-                <span class="accommodation-price1">
-                  от
-                </span>
-                <span class="accommodation-price2">
-                  6000р
-                </span>
-                <span class="accommodation-price3">
-                  / ночь
-                </span>
-                <span>
-                  <img src="img/gold-star.svg" alt="рейтинг отеля 5 из 5" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                </span>
-              </p>
-              <h3 class="accommodation-hotel-name">
-                Lagoona mentira piadosa
-              </h3>
-              <address class="accommodation-city-country">
-                Барселона, Испания
-              </address>
-              <span class="button-position">
-                <button class="button accommodation-button btn-reset">
-                  Номера
-                </button>
-              </span>
-            </div>
-          </li>
-          <li class="accommodation-list-item accommodation-down-element">
-            <img src="img/29.jpg" alt="Lagoona suerte siguió siempre">
-            <div class="price-position">
-              <p class="accommodation-price">
-                <span class="accommodation-price1">
-                  от
-                </span>
-                <span class="accommodation-price2">
-                  6000р
-                </span>
-                <span class="accommodation-price3">
-                  / ночь
-                </span>
-                <span>
-                  <img src="img/gold-star.svg" alt="рейтинг отеля 4 из 5" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/gold-star.svg" alt="" class="star">
-                  <img src="img/star.svg" alt="" class="star">
-                </span>
-              </p>
-              <h3 class="accommodation-hotel-name">
-                Lagoona suerte siguió siempre
-              </h3>
-              <address class="accommodation-city-country">
-                Барселона, Испания
-              </address>
-              <span class="button-position">
-                <button class="button accommodation-button btn-reset">
-                  Номера
-                </button>
-              </span>
-            </div>
-          </li>
-          <li class="accommodation-list-item all-href accom-bacgr flex">
-            <a href="#" class="href-reset accommodation-link-to-all flex">
-              <p class="more-information">
-                Посмотреть все варианты
-              </p>
-              <svg width="10" height="18" viewbox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="position-for-rectangle-acc">
-                <path d="M0.778175 1.22183L8.55635 9L0.778175 16.7782" stroke="white" stroke-width="2"></path>
-              </svg>
+          <li class="howwework__item">
+            <a href="#fourthstep" class="href-reset howwework__href" data-path="four">
+              4 шаг
             </a>
           </li>
         </ul>
-      </div>
-    </section>
-    <section id="want-tour" class="want-tour">
-      <div class="container tour-background">
-        <h2 class="h2 tour-title">
-          Хочу тур
-        </h2>
-        <form action="https://postman-echo.com/post" method="POST" class="want-tour-form flex">
-          <label class="tour-label city-label">
-            <span class="legend">Город вылета</span>
-            <select name="city" class="city-select tour-font">
-              <option value="Санкт-Петербург">Санкт-Петербург</option>
-              <option value="Москва">Москва</option>
-              <option value="Сидней">Сидней</option>
-            </select>
-          </label>
-          <label class="tour-label city-label">
-            <span class="legend">Страна</span>
-            <select name="country" class="city-select tour-font">
-              <option value="Австралия">Австралия</option>
-              <option value="Россия">Россия</option>
-            </select>
-          </label>
-          <label class="tour-label">
-            <span class="legend input-legend">Дата прибытия</span>
-            <input name="date" type="date" class="input-date tour-font">
-          </label>
-          <label class="tour-label">
-            <span class="legend input-legend">Ночей</span>
-            <input name="nights" type="number" min="1" max="31" step="1" value="1" class="input-number tour-font">
-          </label>
-          <label class="tour-label">
-            <span class="legend input-legend">Туристы</span>
-            <input name="tourists" type="number" min="1" max="15" value="1" class="input-number tour-font">
-          </label>
-          <button class="button btn-reset tour-button">
-            Найти
-          </button>
-        </form>
-      </div>
-    </section>
-    <section id="сontacts" class="сontacts">
-      <div class="container">
-        <h2 class="h2">
-          Контакты
-        </h2>
-        <div class="div-contacts flex">
-          <div class="contacts-img-margin">
-            <ul class="list-contacts">
-              <li class="flex contacts-margin">
-                <h3 class="contacts-titles">
-                  Адрес
-                </h3>
-                <address>
-                  <p class="list-item-contacts">
-                    Москва, улица Юности, дом 5 строение 4, офис 2
-                  </p>
-                </address>
-              </li>
-              <li class="border-span-contacts"></li>
-              <li class="flex-list-contacts contacts-margin">
-                <h3 class="contacts-titles">
-                  Телефоны
-                </h3>
-                <div class="flex-telephone">
-                  <a href="tel:+74995356434" class="list-item-contacts first-item-contacts contacts-href">
-                    +7 (499) 535-64-34
-                  </a>
-                  <a href="tel:+74950050544" class="list-item-contacts contacts-href">
-                    +7 (495) 005-05-44
-                  </a>
-                </div>
-              </li>
-              <li class="border-span-contacts"></li>
-              <li class="flex-list-contacts contacts-margin">
-                <h3 class="contacts-titles">
-                  E-mail
-                </h3>
-                <div class="test">
-                  <a href="mailto:lg.oona@mail.ru" class="list-item-contacts contacts-href">
-                    lg.oona@mail.ru
-                  </a>
-                  <p class="list-item-contacts contacts-text-color">
-                    по вопросам бронирования
-                  </p>
-                  <a href="mailto:hotels.ln@mail.ru" class="list-item-contacts contacts-href">
-                    hotels.ln@mail.ru
-                  </a>
-                  <p class="list-item-contacts contacts-text-color">
-                    по вопросам сотрудничества
-                  </p>
-                </div>
-              </li>
-              <li class="border-span-contacts"></li>
-              <li class="flex contacts-margin">
-                <h3 class="contacts-titles">
-                  График
-                </h3>
-                <p class="list-item-contacts">
-                  Понедельник - пятница, <br> с 10:00 до 19:00
-                </p>
-              </li>
-              <li class="border-span-contacts last-border-span"></li>
-            </ul>
-            <button class="btn-reset contacts-button">
-              Построить маршрут
-            </button>
+        <div class="tabs-item tabs-item--active howwework__block--one flex" data-target="one">
+          <div class="howwework__block1">
+            <h3 class="howwework__title">
+              Проводим консультацию
+            </h3>
+            <p class="howwework__text howwework__text1">
+              Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации
+              современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены
+              соответствующими инстанциями.<br class="br"> А также представители современных социальных резервов,
+              инициированные исключительно синтетически, ограничены
+              исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных
+              источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся
+              вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины
+              в целом, однако конкретные выводы, разумеется, призваны к ответу.
+            </p>
+            <div class="howwework__button">
+              <button class="btn-reset howwework__button1">
+                Подробнее
+              </button>
+              <button class="btn-reset howwework__button2">
+                Договор
+              </button>
+            </div>
           </div>
-          <img src="img/Layer21.jpg" alt="reception" class="img-contacts">
         </div>
+        <div class="tabs-item howwework__block--two flex" data-target="two">
+          <div class="howwework__block1">
+            <h2 class="howwework__title">
+              Составляем смету
+            </h2>
+            <p class="howwework__text howwework__text1">
+              Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов,
+              некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями.
+              А также представители современных социальных резервов, инициированные исключительно синтетически,
+              ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные
+              с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+            </p>
+            <div class="howwework__button">
+              <button class="btn-reset howwework__button1">
+                Подробнее
+              </button>
+              <button class="btn-reset howwework__button2">
+                Договор
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-item howwework__block--three flex" data-target="three">
+          <div class="howwework__block1">
+            <h2 class="howwework__title">
+              Привлекаем подрядчиков
+            </h2>
+            <p class="howwework__text howwework__text1">
+              Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа
+              прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории
+              является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую
+              зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель
+              организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание
+              показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет
+              выполнить важные задания по разработке прогресса профессионального сообщества.
+            </p>
+            <div class="howwework__button">
+              <button class="btn-reset howwework__button1">
+                Подробнее
+              </button>
+              <button class="btn-reset howwework__button2">
+                Договор
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-item howwework__block--four flex" data-target="four">
+          <div class="howwework__block1">
+            <h2 class="howwework__title">
+              Инспектируем все этапы работ
+            </h2>
+            <p class="howwework__text howwework__text1">
+              Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого
+              факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития.
+              Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит
+              о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное
+              информационно-пропагандистское обеспечение нашей деятельности позволяет.
+            </p>
+            <div class="howwework__button">
+              <button class="btn-reset howwework__button1">
+                Подробнее
+              </button>
+              <button class="btn-reset howwework__button2">
+                Договор
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="question">
+      <div class="container question__container">
+        <h2 class="question__header">
+          Часто задаваемые вопросы
+        </h2>
+        <ul class="list accordion-container">
+          <li class="list__item ac">
+            <h3 class="ac-header">
+              <button class="item__top item__top1 ac-trigger">
+                <span class="item__top__question">Из чего формируется конечная стоимость проекта?</span>
+                <span class="item__top__btn btn btn__plus-2"></span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="accordion-text">
+                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                нас
+                к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы.
+                Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных
+                требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие
+                нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают
+                нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых
+                факторов.
+              </p>
+              <p class="accordion-text">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                к ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв
+                населения,
+                а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы,
+                а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                представлены в исключительно положительном свете.
+              </p>
+            </div>
+          </li>
+          <li class="list__item">
+            <h3 class="ac-header">
+              <button class="item__top item__top2">
+                <span class="item__top__question">У меня есть свой проект. Сможем ли мы его доработать /
+                  реализовать?</span>
+                <span class="item__top__btn btn btn__plus-2"></span>
+              </button>
+            </h3>
+          </li>
+          <li class="list__item">
+            <h3 class="ac-header">
+              <button class="item__top item__top2">
+                <span class="item__top__question">Я выбираю между разными компаниями. В чём ваше отличие?</span>
+                <span class="item__top__btn btn btn__plus-2"></span>
+              </button>
+            </h3>
+          </li>
+          <li class="list__item">
+            <h3 class="ac-header">
+              <button class="item__top item__top2">
+                <span class="item__top__question">Могу ли я делегировать вам работу / согласование с подрядчиком /
+                  организацией?</span>
+                <span class="item__top__btn btn btn__plus-2"></span>
+              </button>
+            </h3>
+          </li>
+          <li class="list__item">
+            <h3 class="ac-header">
+              <button class="item__top item__top2">
+                <span class="item__top__question">Могу ли я вернуть деньги на каком-либо из этапов работ?</span>
+                <span class="item__top__btn btn btn__plus-2"></span>
+              </button>
+            </h3>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
-
   <footer class="footer">
-    <div class="container footer-container flex">
-      <div class="footer-flex-elements">
-        <p class="footer-margin-elements footer-font">
-          © 2012-2020 Управляющая компания Объединенной сети «Лагуна Хотелс»
-        </p>
-        <p class="footer-margin-elements2 footer-font">
-          Представленная на сайте информация носит справочный характер <br> и не является публичной офертой
-        </p>
-        <a href="#" class="href-reset footer-href-fonts">
-          Пользовательское соглашение
-        </a>
-      </div>
-      <div class="footer-flex-addres">
-        <address class="footer-addres">
-          11710, улица Юности, дом 5 строение 4, офис 2
-        </address>
-        <p class="footer-addres-tel-margin">
-          <a href="tel:+74995356434" class="footer-item-contacts footer-href-fonts">
-            +7 (499) 535-64-34
-          </a>
-          <a href="tel:+74950050544" class="footer-item-contacts footer-href-fonts">
-            +7 (495) 005-05-44
-          </a>
-        </p>
-        <a href="mailto:lg.oona@mail.ru" class="footer-item-contacts footer-href-fonts">
-          lg.oona@mail.ru
-        </a>
-        <a href="mailto:hotels.ln@mail.ru" class="footer-item-contacts footer-href-fonts">
-          hotels.ln@mail.ru
-        </a>
-      </div>
-      <div class="footer-flex-social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social-href">
-              <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_370726_100)">
-                  <path
-                    d="M17.1779 11.7844C16.3343 11.7844 15.6441 12.449 15.6441 13.2926C15.6441 14.1362 16.3343 14.8263 17.1523 14.8263C17.9959 14.8263 18.6605 14.1362 18.6605 13.3182C18.6861 12.449 18.0214 11.7844 17.1779 11.7844ZM17.1779 14.0595C16.7433 14.0595 16.411 13.7272 16.411 13.2926C16.411 12.858 16.7433 12.5257 17.1779 12.5257C17.6124 12.5257 17.9447 12.8836 17.9447 13.2926C17.9447 13.7272 17.5869 14.0595 17.1779 14.0595Z"
-                    fill="#999999" />
-                  <path
-                    d="M7.7965 9.58598C5.77707 9.56042 4.01327 11.2475 4.06439 13.3948C4.08996 15.3886 5.75151 17.1013 7.84762 17.0757C9.89261 17.0502 11.5542 15.3886 11.5542 13.3436C11.5542 11.2731 9.89261 9.58598 7.7965 9.58598ZM7.84762 15.6187C6.49282 15.6698 5.39364 14.5962 5.39364 13.2925C5.39364 11.9633 6.49282 10.9408 7.71981 10.9663C8.99793 10.9663 10.046 11.9888 10.046 13.2925C10.0715 14.5962 9.04905 15.5676 7.84762 15.6187Z"
-                    fill="#999999" />
-                  <path
-                    d="M12.5 0C5.59815 0 0 5.59815 0 12.5C0 19.4018 5.59815 25 12.5 25C19.4018 25 25 19.4018 25 12.5C25 5.59815 19.4018 0 12.5 0ZM19.683 17.3568C18.9161 17.8425 18.0726 18.0726 17.1779 18.0726C16.7945 18.0726 16.411 18.0215 16.0532 17.9192C15.1585 17.6891 14.3916 17.229 13.7525 16.5644C13.6759 16.4877 13.5992 16.3855 13.4969 16.2832C13.1646 16.7945 12.8323 17.2801 12.5 17.7914C12.1677 17.2801 11.8354 16.7945 11.5031 16.3088C11.4775 16.3088 11.4775 16.3343 11.4775 16.3343L11.4519 16.3599C10.6851 17.2801 9.71369 17.817 8.53782 18.0215C7.8732 18.1237 7.23414 18.0981 6.59509 17.9192C5.7004 17.6636 4.93353 17.2035 4.29447 16.4877C3.68098 15.7975 3.3231 15.0051 3.16973 14.0849C3.01636 13.2413 3.19529 12.4233 3.24642 12.2188C3.39979 11.6309 3.62985 11.1196 3.98773 10.6339C4.01329 10.6084 4.01329 10.5317 4.01329 10.5061C3.88548 9.99488 3.62985 9.53475 3.34867 9.07463C3.27198 8.97238 3.19529 8.87013 3.11861 8.74232V8.71676C3.14417 8.71676 3.14417 8.71676 3.16973 8.71676C4.11554 8.71676 5.06134 8.71676 6.00715 8.71676C6.05828 8.71676 6.08384 8.6912 6.13496 8.66564C6.79958 8.23108 7.51533 7.89876 8.25664 7.64314C8.79345 7.4642 9.33026 7.31083 9.89263 7.20858C10.4294 7.10633 10.9662 7.02964 11.5286 7.00408C12.8579 6.90183 13.9315 7.02964 14.6472 7.13189C15.184 7.20858 15.6953 7.33639 16.2065 7.48977C17.1012 7.77095 17.9192 8.15439 18.7116 8.64007C18.7628 8.66564 18.8394 8.6912 18.9161 8.6912C19.8364 8.6912 20.7566 8.6912 21.6769 8.6912C21.7536 8.6912 21.8302 8.6912 21.9069 8.6912C21.9069 8.71676 21.9069 8.71676 21.9069 8.71676C21.8558 8.79345 21.8302 8.84457 21.7791 8.92126C21.4724 9.40694 21.1912 9.89263 21.0378 10.455C21.0122 10.5061 21.0122 10.5572 21.0634 10.6339C21.8814 11.8098 22.137 13.1135 21.8047 14.5194C21.4468 15.7208 20.7566 16.6667 19.683 17.3568Z"
-                    fill="#999999" />
-                  <path
-                    d="M7.71982 11.7844C6.90182 11.7844 6.21164 12.4746 6.21164 13.2926C6.21164 14.1362 6.90182 14.8008 7.74538 14.8008C8.56338 14.8008 9.25356 14.1106 9.25356 13.267C9.25356 12.449 8.58894 11.7844 7.71982 11.7844ZM7.74538 14.085C7.31082 14.085 6.95295 13.7527 6.95295 13.2926C6.95295 12.858 7.28526 12.5257 7.71982 12.5257C8.15438 12.5257 8.48669 12.858 8.51225 13.2926C8.53781 13.7272 8.17994 14.0595 7.74538 14.085Z"
-                    fill="#999999" />
-                  <path
-                    d="M17.1012 9.61152C15.0562 9.66264 13.4458 11.2986 13.4202 13.3436C13.4202 15.4142 15.1073 17.1268 17.1779 17.1013C19.2484 17.1013 20.9356 15.4397 20.9356 13.3436C20.9356 11.1964 19.1718 9.56039 17.1012 9.61152ZM17.2801 15.6187C15.9253 15.6698 14.8517 14.5962 14.8517 13.2925C14.8517 11.9633 15.9509 10.9408 17.1779 10.9663C18.456 10.9663 19.5041 11.9888 19.5041 13.2925C19.5041 14.5706 18.4816 15.5675 17.2801 15.6187Z"
-                    fill="#999999" />
-                  <path
-                    d="M13.9826 9.86723C14.8006 9.10035 15.7975 8.71692 16.9223 8.61467C15.593 8.02674 14.1871 7.77111 12.73 7.74555C11.094 7.71999 9.48361 7.95005 7.97543 8.58911C9.12574 8.6658 10.1227 9.04923 10.9662 9.8161C11.8098 10.583 12.2955 11.5543 12.4744 12.6791C12.6789 11.5799 13.1646 10.6341 13.9826 9.86723Z"
-                    fill="#999999" />
-                </g>
-                <defs>
-                  <clippath id="clip0_370726_100">
-                    <rect width="25" height="25" fill="white" />
-                  </clippath>
-                </defs>
-              </svg>
+    <section class="container section__footer">
+      <div class="footter__block1">
+        <svg class="footer__logo" width="225" height="72" viewbox="0 0 225 72" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M70.5385 36.2905C69.4378 36.9224 68.1026 37.4218 66.533 37.7887C64.9634 38.1556 63.3326 38.3391 61.6407 38.3391C59.3576 38.3391 57.4109 38.0639 55.8006 37.5135C54.2106 36.9632 53.0079 36.1987 52.1925 35.2203C51.3975 34.2418 51 33.1105 51 31.8263C51 30.7051 51.3058 29.7165 51.9173 28.8603C52.5288 28.0042 53.3748 27.3417 54.4552 26.8728C53.6194 26.4447 52.9773 25.8536 52.5288 25.0994C52.1008 24.3248 51.8867 23.4788 51.8867 22.5615C51.8867 21.3792 52.2536 20.2988 52.9875 19.3204C53.7417 18.3419 54.8832 17.5571 56.4121 16.9659C57.9409 16.3748 59.8265 16.0792 62.0688 16.0792C63.4753 16.0792 64.8615 16.2117 66.2272 16.4767C67.593 16.7417 68.7957 17.0984 69.8353 17.5469L68.1841 22.0723C66.2884 21.2365 64.3315 20.8186 62.3134 20.8186C60.8661 20.8186 59.7857 21.0123 59.0723 21.3996C58.3588 21.7665 58.0021 22.2863 58.0021 22.959C58.0021 24.1821 58.8888 24.7936 60.6623 24.7936H66.7165V29.4107H60.2648C59.2251 29.4107 58.4403 29.584 57.9103 29.9305C57.3804 30.2566 57.1154 30.7459 57.1154 31.3982C57.1154 32.0913 57.5027 32.6314 58.2773 33.0187C59.0519 33.4061 60.2546 33.5997 61.8853 33.5997C63.0472 33.5997 64.2397 33.4468 65.4628 33.1411C66.7063 32.8149 67.7866 32.3766 68.7039 31.8263L70.5385 36.2905Z"
+            fill="white" />
+          <path
+            d="M86.1224 29.2272C88.0182 29.8591 88.9661 31.1638 88.9661 33.1411C88.9661 34.6291 88.3851 35.8012 87.2232 36.6574C86.0613 37.4931 84.349 37.911 82.0863 37.911H72.7604V21.3384H81.6582C83.819 21.3384 85.4905 21.7155 86.6728 22.4698C87.8755 23.224 88.4768 24.284 88.4768 25.6497C88.4768 26.4447 88.273 27.148 87.8653 27.7595C87.4576 28.3711 86.8767 28.8603 86.1224 29.2272ZM77.9584 28.0042H81.1384C82.4838 28.0042 83.1565 27.5047 83.1565 26.5059C83.1565 25.5478 82.4838 25.0688 81.1384 25.0688H77.9584V28.0042ZM81.5665 34.1501C82.973 34.1501 83.6763 33.6405 83.6763 32.6213C83.6763 31.602 82.9934 31.0924 81.6276 31.0924H77.9584V34.1501H81.5665Z"
+            fill="white" />
+          <path
+            d="M99.6672 32.0097H97.7103V37.911H91.9007V21.3384H97.7103V27.4538H99.7895L103.856 21.3384H110.002L104.437 29.2884L110.369 37.911H103.52L99.6672 32.0097Z"
+            fill="white" />
+          <path
+            d="M129.174 21.3384V37.911H123.364V25.9555H119.175L119.053 28.4934C118.971 30.6541 118.757 32.4378 118.411 33.8443C118.064 35.2509 117.493 36.3516 116.698 37.1466C115.903 37.9212 114.813 38.3085 113.427 38.3085C112.713 38.3085 111.775 38.176 110.613 37.911L110.858 33.1716C111.225 33.2124 111.47 33.2328 111.592 33.2328C112.224 33.2328 112.703 33.0289 113.029 32.6213C113.355 32.2136 113.579 31.6734 113.702 31.0007C113.824 30.3076 113.906 29.3903 113.946 28.2488L114.191 21.3384H129.174Z"
+            fill="white" />
+          <path
+            d="M150.14 21.3384V37.911H144.605V36.1682C143.994 36.8205 143.26 37.3199 142.404 37.6664C141.568 38.013 140.671 38.1862 139.713 38.1862C137.552 38.1862 135.83 37.5543 134.545 36.2905C133.282 35.0266 132.65 33.1309 132.65 30.6032V21.3384H138.459V29.6553C138.459 32.0403 139.387 33.2328 141.242 33.2328C142.159 33.2328 142.903 32.9168 143.474 32.2849C144.045 31.6326 144.33 30.644 144.33 29.319V21.3384H150.14Z"
+            fill="white" />
+          <path
+            d="M171.682 21.3384V34.8839C171.682 37.962 170.847 40.2654 169.175 41.7943C167.504 43.3435 165.098 44.1181 161.959 44.1181C160.328 44.1181 158.799 43.9347 157.372 43.5677C155.946 43.2008 154.733 42.6606 153.734 41.9472L155.844 37.8805C156.516 38.4308 157.362 38.8589 158.382 39.1647C159.421 39.4908 160.44 39.6539 161.439 39.6539C162.968 39.6539 164.089 39.3176 164.803 38.6449C165.516 37.9722 165.873 36.9733 165.873 35.6483V35.098C164.752 36.4026 163.111 37.0549 160.95 37.0549C159.482 37.0549 158.127 36.7287 156.883 36.0764C155.64 35.4037 154.651 34.466 153.917 33.2634C153.183 32.0403 152.817 30.6338 152.817 29.0438C152.817 27.4742 153.183 26.088 153.917 24.8853C154.651 23.6623 155.64 22.7246 156.883 22.0723C158.127 21.3996 159.482 21.0632 160.95 21.0632C163.315 21.0632 165.047 21.8277 166.148 23.3565V21.3384H171.682ZM162.326 32.4378C163.366 32.4378 164.222 32.1218 164.894 31.4899C165.587 30.858 165.934 30.0426 165.934 29.0438C165.934 28.0449 165.598 27.2397 164.925 26.6282C164.252 25.9963 163.386 25.6803 162.326 25.6803C161.266 25.6803 160.389 25.9963 159.696 26.6282C159.024 27.2397 158.687 28.0449 158.687 29.0438C158.687 30.0426 159.034 30.858 159.727 31.4899C160.42 32.1218 161.286 32.4378 162.326 32.4378Z"
+            fill="white" />
+          <path d="M60.4259 46.0097V55.9885H57.6319V48.2478H53.8399V55.9885H51.0601V46.0097H60.4259Z" fill="white" />
+          <path
+            d="M66.5363 48.1338C67.3822 48.1338 68.1187 48.2954 68.7459 48.6185C69.3732 48.9416 69.8531 49.4073 70.1857 50.0155C70.5278 50.6142 70.6989 51.3175 70.6989 52.1253C70.6989 52.9236 70.5421 53.6269 70.2285 54.2351C69.9149 54.8338 69.4729 55.2995 68.9027 55.6321C68.3325 55.9552 67.672 56.1168 66.9212 56.1168C66.0374 56.1168 65.3436 55.846 64.84 55.3042V58.7541H62.1314V52.1538C62.1314 51.3555 62.312 50.6522 62.6731 50.044C63.0343 49.4358 63.5475 48.9654 64.2127 48.6327C64.878 48.3001 65.6525 48.1338 66.5363 48.1338ZM66.408 53.9642C66.8927 53.9642 67.2824 53.7979 67.577 53.4653C67.8811 53.1232 68.0332 52.6765 68.0332 52.1253C68.0332 51.5741 67.8811 51.1322 67.577 50.7995C67.2824 50.4574 66.8927 50.2864 66.408 50.2864C65.9234 50.2864 65.5337 50.4574 65.2391 50.7995C64.9445 51.1322 64.7972 51.5741 64.7972 52.1253C64.7972 52.686 64.9397 53.1327 65.2248 53.4653C65.5195 53.7979 65.9139 53.9642 66.408 53.9642Z"
+            fill="white" />
+          <path
+            d="M75.8141 56.1168C74.9873 56.1168 74.2413 55.9457 73.576 55.6036C72.9108 55.2615 72.3881 54.7863 72.008 54.1781C71.6373 53.5698 71.452 52.8808 71.452 52.111C71.452 51.3508 71.6373 50.6665 72.008 50.0583C72.3881 49.45 72.906 48.9796 73.5618 48.647C74.227 48.3049 74.9778 48.1338 75.8141 48.1338C76.6505 48.1338 77.4012 48.3049 78.0665 48.647C78.7317 48.9796 79.2497 49.45 79.6203 50.0583C79.991 50.657 80.1763 51.3413 80.1763 52.111C80.1763 52.8808 79.991 53.5698 79.6203 54.1781C79.2497 54.7863 78.7317 55.2615 78.0665 55.6036C77.4012 55.9457 76.6505 56.1168 75.8141 56.1168ZM75.8141 53.9642C76.2893 53.9642 76.679 53.8027 76.9831 53.4796C77.2872 53.1469 77.4393 52.6908 77.4393 52.111C77.4393 51.5408 77.2872 51.0942 76.9831 50.771C76.679 50.4479 76.2893 50.2864 75.8141 50.2864C75.339 50.2864 74.9493 50.4479 74.6452 50.771C74.3411 51.0942 74.189 51.5408 74.189 52.111C74.189 52.6908 74.3411 53.1469 74.6452 53.4796C74.9493 53.8027 75.339 53.9642 75.8141 53.9642Z"
+            fill="white" />
+          <path
+            d="M85.5379 54.0498C85.9085 54.0498 86.2269 53.9975 86.493 53.893C86.7686 53.7884 87.0442 53.6174 87.3198 53.3798L88.7311 54.8623C87.9993 55.6986 86.9064 56.1168 85.4523 56.1168C84.5495 56.1168 83.7559 55.9457 83.0717 55.6036C82.3874 55.2615 81.8552 54.7863 81.4751 54.1781C81.1044 53.5698 80.9191 52.8808 80.9191 52.111C80.9191 51.3508 81.1044 50.6712 81.4751 50.0725C81.8457 49.4643 82.3542 48.9891 83.0004 48.647C83.6562 48.3049 84.3879 48.1338 85.1957 48.1338C85.9465 48.1338 86.6308 48.2906 87.2485 48.6042C87.8758 48.9083 88.3747 49.3598 88.7453 49.9585C89.116 50.5477 89.3013 51.251 89.3013 52.0683L83.7845 53.1232C84.0791 53.7409 84.6635 54.0498 85.5379 54.0498ZM85.21 50.0583C84.7443 50.0583 84.3642 50.2056 84.0696 50.5002C83.775 50.7853 83.6086 51.1987 83.5706 51.7404L86.7068 51.1274C86.6118 50.8043 86.4312 50.5477 86.1651 50.3576C85.899 50.1581 85.5806 50.0583 85.21 50.0583Z"
+            fill="white" />
+          <path
+            d="M94.2137 53.2372H93.3014V55.9885H90.5928V48.2621H93.3014V51.1132H94.2707L96.1667 48.2621H99.032L96.4376 51.9685L99.2031 55.9885H96.0099L94.2137 53.2372Z"
+            fill="white" />
+          <path
+            d="M110.165 48.1338C111.116 48.1338 111.871 48.4189 112.432 48.9891C113.002 49.5593 113.287 50.4194 113.287 51.5693V55.9885H110.579V52.0113C110.579 51.4695 110.474 51.0704 110.265 50.8138C110.066 50.5572 109.78 50.4289 109.41 50.4289C109.001 50.4289 108.673 50.5715 108.426 50.8566C108.179 51.1417 108.056 51.5741 108.056 52.1538V55.9885H105.347V52.0113C105.347 50.9564 104.957 50.4289 104.178 50.4289C103.76 50.4289 103.427 50.5715 103.18 50.8566C102.933 51.1417 102.81 51.5741 102.81 52.1538V55.9885H100.101V48.2621H102.681V49.0746C102.966 48.761 103.304 48.5282 103.693 48.3761C104.093 48.2146 104.525 48.1338 104.991 48.1338C105.532 48.1338 106.017 48.2336 106.445 48.4332C106.872 48.6327 107.219 48.9368 107.485 49.3455C107.789 48.9558 108.174 48.6565 108.64 48.4474C109.106 48.2383 109.614 48.1338 110.165 48.1338Z"
+            fill="white" />
+          <path
+            d="M114.927 48.2621H117.621V51.1274H120.401V48.2621H123.11V55.9885H120.401V53.28H117.621V55.9885H114.927V48.2621Z"
+            fill="white" />
+          <path
+            d="M128.615 56.2166C126.058 56.2166 124.78 55.1189 124.78 52.9236V48.2621H127.474V50.714C127.674 50.581 127.94 50.4717 128.272 50.3861C128.615 50.3006 129.004 50.2578 129.441 50.2578C130.392 50.2578 131.138 50.5002 131.679 50.9849C132.221 51.46 132.492 52.1681 132.492 53.1089C132.492 54.1258 132.14 54.9003 131.437 55.4325C130.743 55.9552 129.802 56.2166 128.615 56.2166ZM133.133 48.2621H135.842V55.9885H133.133V48.2621ZM128.615 54.3634C128.985 54.3634 129.266 54.2541 129.456 54.0355C129.646 53.8169 129.741 53.5271 129.741 53.1659C129.741 52.8143 129.646 52.5387 129.456 52.3391C129.266 52.1396 128.99 52.0398 128.629 52.0398C128.372 52.0398 128.144 52.0873 127.945 52.1823C127.745 52.2774 127.588 52.4057 127.474 52.5672V53.1659C127.474 53.5366 127.569 53.8312 127.759 54.0498C127.949 54.2589 128.234 54.3634 128.615 54.3634Z"
+            fill="white" />
+          <path
+            d="M141.752 54.0498C142.123 54.0498 142.441 53.9975 142.707 53.893C142.983 53.7884 143.258 53.6174 143.534 53.3798L144.945 54.8623C144.213 55.6986 143.12 56.1168 141.666 56.1168C140.764 56.1168 139.97 55.9457 139.286 55.6036C138.602 55.2615 138.069 54.7863 137.689 54.1781C137.319 53.5698 137.133 52.8808 137.133 52.111C137.133 51.3508 137.319 50.6712 137.689 50.0725C138.06 49.4643 138.568 48.9891 139.215 48.647C139.87 48.3049 140.602 48.1338 141.41 48.1338C142.161 48.1338 142.845 48.2906 143.463 48.6042C144.09 48.9083 144.589 49.3598 144.959 49.9585C145.33 50.5477 145.515 51.251 145.515 52.0683L139.999 53.1232C140.293 53.7409 140.878 54.0498 141.752 54.0498ZM141.424 50.0583C140.958 50.0583 140.578 50.2056 140.284 50.5002C139.989 50.7853 139.823 51.1987 139.785 51.7404L142.921 51.1274C142.826 50.8043 142.645 50.5477 142.379 50.3576C142.113 50.1581 141.795 50.0583 141.424 50.0583Z"
+            fill="white" />
+          <path
+            d="M154.833 56.1168C153.978 56.1168 153.213 55.9457 152.538 55.6036C151.863 55.2615 151.336 54.7863 150.955 54.1781C150.585 53.5698 150.4 52.8808 150.4 52.111C150.4 51.3413 150.585 50.657 150.955 50.0583C151.336 49.45 151.863 48.9796 152.538 48.647C153.213 48.3049 153.978 48.1338 154.833 48.1338C155.707 48.1338 156.463 48.3239 157.1 48.704C157.736 49.0746 158.188 49.5926 158.454 50.2578L156.358 51.327C156.007 50.6332 155.493 50.2864 154.819 50.2864C154.334 50.2864 153.93 50.4479 153.607 50.771C153.293 51.0942 153.137 51.5408 153.137 52.111C153.137 52.6908 153.293 53.1469 153.607 53.4796C153.93 53.8027 154.334 53.9642 154.819 53.9642C155.493 53.9642 156.007 53.6174 156.358 52.9236L158.454 53.9928C158.188 54.658 157.736 55.1807 157.1 55.5608C156.463 55.9315 155.707 56.1168 154.833 56.1168Z"
+            fill="white" />
+          <path
+            d="M167.541 48.2621V55.9885H164.961V55.1759C164.676 55.4801 164.334 55.7129 163.935 55.8745C163.545 56.036 163.127 56.1168 162.68 56.1168C161.673 56.1168 160.87 55.8222 160.271 55.233C159.682 54.6437 159.387 53.7599 159.387 52.5815V48.2621H162.096V52.1396C162.096 53.2515 162.528 53.8074 163.393 53.8074C163.821 53.8074 164.167 53.6601 164.433 53.3655C164.7 53.0614 164.833 52.6005 164.833 51.9827V48.2621H167.541Z"
+            fill="white" />
+          <path
+            d="M173.237 56.1168C172.382 56.1168 171.616 55.9457 170.942 55.6036C170.267 55.2615 169.74 54.7863 169.359 54.1781C168.989 53.5698 168.803 52.8808 168.803 52.111C168.803 51.3413 168.989 50.657 169.359 50.0583C169.74 49.45 170.267 48.9796 170.942 48.647C171.616 48.3049 172.382 48.1338 173.237 48.1338C174.111 48.1338 174.867 48.3239 175.503 48.704C176.14 49.0746 176.592 49.5926 176.858 50.2578L174.762 51.327C174.411 50.6332 173.897 50.2864 173.223 50.2864C172.738 50.2864 172.334 50.4479 172.011 50.771C171.697 51.0942 171.54 51.5408 171.54 52.111C171.54 52.6908 171.697 53.1469 172.011 53.4796C172.334 53.8027 172.738 53.9642 173.223 53.9642C173.897 53.9642 174.411 53.6174 174.762 52.9236L176.858 53.9928C176.592 54.658 176.14 55.1807 175.503 55.5608C174.867 55.9315 174.111 56.1168 173.237 56.1168Z"
+            fill="white" />
+          <path
+            d="M188.055 48.1338C189.005 48.1338 189.761 48.4189 190.321 48.9891C190.892 49.5593 191.177 50.4194 191.177 51.5693V55.9885H188.468V52.0113C188.468 51.4695 188.364 51.0704 188.155 50.8138C187.955 50.5572 187.67 50.4289 187.299 50.4289C186.891 50.4289 186.563 50.5715 186.316 50.8566C186.069 51.1417 185.945 51.5741 185.945 52.1538V55.9885H183.237V52.0113C183.237 50.9564 182.847 50.4289 182.068 50.4289C181.649 50.4289 181.317 50.5715 181.07 50.8566C180.823 51.1417 180.699 51.5741 180.699 52.1538V55.9885H177.991V48.2621H180.571V49.0746C180.856 48.761 181.193 48.5282 181.583 48.3761C181.982 48.2146 182.414 48.1338 182.88 48.1338C183.422 48.1338 183.907 48.2336 184.334 48.4332C184.762 48.6327 185.109 48.9368 185.375 49.3455C185.679 48.9558 186.064 48.6565 186.53 48.4474C186.995 48.2383 187.504 48.1338 188.055 48.1338Z"
+            fill="white" />
+          <path
+            d="M196.908 54.0498C197.279 54.0498 197.597 53.9975 197.863 53.893C198.139 53.7884 198.414 53.6174 198.69 53.3798L200.101 54.8623C199.369 55.6986 198.277 56.1168 196.822 56.1168C195.92 56.1168 195.126 55.9457 194.442 55.6036C193.758 55.2615 193.225 54.7863 192.845 54.1781C192.475 53.5698 192.289 52.8808 192.289 52.111C192.289 51.3508 192.475 50.6712 192.845 50.0725C193.216 49.4643 193.724 48.9891 194.371 48.647C195.026 48.3049 195.758 48.1338 196.566 48.1338C197.317 48.1338 198.001 48.2906 198.619 48.6042C199.246 48.9083 199.745 49.3598 200.115 49.9585C200.486 50.5477 200.671 51.251 200.671 52.0683L195.155 53.1232C195.449 53.7409 196.034 54.0498 196.908 54.0498ZM196.58 50.0583C196.114 50.0583 195.734 50.2056 195.44 50.5002C195.145 50.7853 194.979 51.1987 194.941 51.7404L198.077 51.1274C197.982 50.8043 197.801 50.5477 197.535 50.3576C197.269 50.1581 196.951 50.0583 196.58 50.0583Z"
+            fill="white" />
+          <path
+            d="M209.461 55.9885V51.9257L207.48 55.3042H206.325L204.401 51.8687V55.9885H201.963V48.2621H204.814L206.967 52.2964L209.333 48.2621H211.885L211.899 55.9885H209.461Z"
+            fill="white" />
+          <path
+            d="M217.404 56.2166C214.848 56.2166 213.57 55.1189 213.57 52.9236V48.2621H216.264V50.714C216.464 50.581 216.73 50.4717 217.062 50.3861C217.404 50.3006 217.794 50.2578 218.231 50.2578C219.182 50.2578 219.928 50.5002 220.469 50.9849C221.011 51.46 221.282 52.1681 221.282 53.1089C221.282 54.1258 220.93 54.9003 220.227 55.4325C219.533 55.9552 218.592 56.2166 217.404 56.2166ZM221.923 48.2621H224.632V55.9885H221.923V48.2621ZM217.404 54.3634C217.775 54.3634 218.055 54.2541 218.245 54.0355C218.436 53.8169 218.531 53.5271 218.531 53.1659C218.531 52.8143 218.436 52.5387 218.245 52.3391C218.055 52.1396 217.78 52.0398 217.419 52.0398C217.162 52.0398 216.934 52.0873 216.734 52.1823C216.535 52.2774 216.378 52.4057 216.264 52.5672V53.1659C216.264 53.5366 216.359 53.8312 216.549 54.0498C216.739 54.2589 217.024 54.3634 217.404 54.3634Z"
+            fill="white" />
+          <path
+            d="M9.34478 42.7145L17.3505 24.2755H20.0363V29.4921L14.3548 42.7145H18.5901V40.3386C18.5901 39.7601 19.5542 39.7188 20.0363 39.7704V47.0531C18.7141 47.0531 18.5212 46.6054 18.5901 46.3816V44.3156H13.5801L1.18409 72H0.719238L3.86988 62.4447C3.86988 62.4447 1.08079 61.3601 2.01049 59.0359C2.94018 56.7116 8.51838 44.3156 8.51838 44.3156H2.01049V42.7145H9.34478Z"
+            fill="#FF9900" />
+          <path
+            d="M30.2113 42.7145L22.2056 24.2755H19.5198V29.4921L25.2013 42.7145H20.966V40.3386C20.966 39.7601 20.0019 39.7188 19.5198 39.7704V47.0531C20.8421 47.0531 21.0349 46.6054 20.966 46.3816V44.3156H25.9761L38.372 72H38.8369L35.6862 62.4447C35.6862 62.4447 38.4753 61.3601 37.5456 59.0359C36.6159 56.7116 31.0377 44.3156 31.0377 44.3156H37.5456V42.7145H30.2113Z"
+            fill="#FF9900" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M19.83 21.5897C22.8537 21.5897 25.3049 19.1385 25.3049 16.1148C25.3049 13.0911 22.8537 10.6399 19.83 10.6399C16.8063 10.6399 14.3551 13.0911 14.3551 16.1148C14.3551 19.1385 16.8063 21.5897 19.83 21.5897ZM19.83 24.5854C24.5081 24.5854 28.3006 20.793 28.3006 16.1148C28.3006 11.4366 24.5081 7.64419 19.83 7.64419C15.1518 7.64419 11.3594 11.4366 11.3594 16.1148C11.3594 20.793 15.1518 24.5854 19.83 24.5854Z"
+            fill="white" />
+          <path d="M18.2805 0H21.3795V8.16069H18.2805V0Z" fill="white" />
+        </svg>
+        <ul class="list-reset footer__list">
+          <li class="footer__item">
+            <a href="#aboutus" class="href-reset footer__href">
+              О нас
             </a>
           </li>
-          <li class="social__item">
-            <a href="https://twitter.com/" class="social-href">
-              <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_96182_8)">
-                  <path
-                    d="M12.5 0C5.59815 0 0 5.59815 0 12.5C0 19.4018 5.59815 25 12.5 25C19.4018 25 25 19.4018 25 12.5C25 5.59815 19.4018 0 12.5 0ZM20.0409 9.15132C20.0409 9.30469 20.0409 9.45807 20.0409 9.58588C20.0409 14.9284 15.9765 20.4499 9.17688 20.4499C7.10633 20.4499 5.08691 19.8619 3.3231 18.7372C3.29754 18.7116 3.27198 18.6605 3.29754 18.635C3.3231 18.5838 3.34867 18.5583 3.39979 18.5838C3.68098 18.6094 3.98773 18.635 4.29447 18.635C5.9049 18.635 7.43864 18.1237 8.74232 17.1779C7.18302 17.0501 5.85378 16.002 5.36809 14.4939C5.36809 14.4683 5.36809 14.4172 5.39366 14.3916C5.41922 14.366 5.44478 14.366 5.47034 14.366C5.9049 14.4427 6.33946 14.4427 6.74846 14.3916C5.13803 13.9059 4.01329 12.3977 4.01329 10.6851V10.6339C4.01329 10.6084 4.03885 10.5828 4.06441 10.5572C4.08998 10.5317 4.11554 10.5317 4.16666 10.5572C4.57566 10.7873 5.03578 10.9407 5.52147 10.9918C4.60122 10.2505 4.06441 9.15132 4.06441 7.94989C4.06441 7.25971 4.24335 6.59509 4.60122 6.00715C4.62678 5.98159 4.65235 5.95603 4.67791 5.95603C4.70347 5.95603 4.72903 5.95603 4.7546 5.98159C6.64621 8.2822 9.40694 9.71369 12.3722 9.89263C12.3211 9.637 12.2955 9.38138 12.2955 9.12576C12.2955 6.97852 14.0337 5.24028 16.181 5.24028C17.229 5.24028 18.2515 5.67484 18.9673 6.41615C19.7853 6.23721 20.5777 5.95603 21.2934 5.52147C21.319 5.4959 21.3701 5.4959 21.3957 5.52147C21.4212 5.54703 21.4468 5.59815 21.4212 5.62372C21.1656 6.39059 20.7055 7.05521 20.0664 7.54089C20.6799 7.43864 21.2679 7.25971 21.8047 7.00408C21.8302 6.97852 21.8814 7.00408 21.9069 7.02964C21.9325 7.05521 21.9325 7.10633 21.9069 7.13189C21.4212 7.97545 20.7822 8.61451 20.0409 9.15132Z"
-                    fill="#999999" />
-                </g>
-                <defs>
-                  <clippath id="clip0_96182_8">
-                    <rect width="25" height="25" fill="white" />
-                  </clippath>
-                </defs>
-              </svg>
+          <li class="footer__item">
+            <a href="#projects" class="href-reset footer__href">
+              Проекты
             </a>
           </li>
-          <li class="social__item">
-            <a href="https://ru-ru.facebook.com/" class="social-href">
-              <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_96182_11)">
-                  <path
-                    d="M12.5 0C5.59815 0 0 5.59815 0 12.5C0 19.4018 5.59815 25 12.5 25C19.4018 25 25 19.4018 25 12.5C25 5.59815 19.4018 0 12.5 0ZM17.2546 6.36502H15.5163C14.1615 6.36502 13.9059 7.00408 13.9059 7.94989V10.0204H17.1268V13.2924H13.9059V21.6769H10.5572V13.2924H7.74539V10.046H10.5572V7.64314C10.5572 4.85685 12.2699 3.3231 14.7495 3.3231H17.2801L17.2546 6.36502Z"
-                    fill="#999999" />
-                </g>
-                <defs>
-                  <clippath id="clip0_96182_11">
-                    <rect width="25" height="25" fill="white" />
-                  </clippath>
-                </defs>
-              </svg>
+          <li class="footer__item">
+            <a href="#reviews" class="href-reset footer__href">
+              Отзывы
             </a>
           </li>
-          <li class="social__item">
-            <a href="https://vk.com/" class="social-href">
-              <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_96182_14)">
-                  <path
-                    d="M12.5 0C5.59815 0 0 5.59815 0 12.5C0 19.4018 5.59815 25 12.5 25C19.4018 25 25 19.4018 25 12.5C25 5.59815 19.4018 0 12.5 0ZM18.8394 13.8548C19.4274 14.4172 20.0409 14.954 20.5521 15.593C20.7822 15.8742 21.0122 16.1554 21.1656 16.4877C21.3957 16.9478 21.1912 17.4591 20.7822 17.4846H18.226C17.5613 17.5358 17.0501 17.2801 16.59 16.82C16.2321 16.4622 15.8998 16.0787 15.5675 15.6953C15.4397 15.5419 15.2863 15.3885 15.1073 15.2863C14.7495 15.0562 14.4427 15.1329 14.2638 15.4908C14.0593 15.8742 14.0082 16.2832 13.9826 16.6922C13.957 17.3057 13.7781 17.4591 13.1646 17.4846C11.8609 17.5358 10.6339 17.3568 9.50919 16.6922C8.51226 16.1043 7.71983 15.3118 7.05521 14.3916C5.72597 12.6022 4.72903 10.6339 3.80879 8.61451C3.60429 8.15439 3.75767 7.92433 4.26891 7.89876C5.11247 7.8732 5.93046 7.8732 6.77402 7.89876C7.10633 7.89876 7.33639 8.10326 7.46421 8.41001C7.92433 9.50919 8.46114 10.5828 9.15132 11.5542C9.33026 11.8098 9.53475 12.0654 9.79038 12.2699C10.0971 12.4744 10.3016 12.3977 10.455 12.0654C10.5317 11.8609 10.5828 11.6309 10.6084 11.4008C10.6851 10.6339 10.6851 9.86707 10.5572 9.10019C10.4806 8.58895 10.2249 8.2822 9.73925 8.17995C9.48363 8.12883 9.53476 8.05214 9.637 7.89876C9.8415 7.6687 10.046 7.51533 10.4294 7.51533H13.318C13.7781 7.61758 13.8804 7.79652 13.9315 8.25664V11.4775C13.9315 11.6564 14.0082 12.1932 14.3405 12.2955C14.5961 12.3722 14.775 12.1677 14.9284 12.0143C15.6186 11.273 16.1043 10.4039 16.5644 9.50919C16.7689 9.1002 16.9223 8.6912 17.1012 8.2822C17.229 7.97545 17.408 7.82208 17.7658 7.82208H20.5521C20.6288 7.82208 20.7055 7.82208 20.8078 7.84764C21.2679 7.92433 21.3957 8.12883 21.2679 8.58895C21.0378 9.30469 20.6033 9.91819 20.1687 10.5061C19.7086 11.1452 19.1973 11.7587 18.7372 12.4233C18.2771 13.0368 18.3026 13.3435 18.8394 13.8548Z"
-                    fill="#999999" />
-                </g>
-                <defs>
-                  <clippath id="clip0_96182_14">
-                    <rect width="25" height="25" fill="white" />
-                  </clippath>
-                </defs>
-              </svg>
+          <li class="footer__item">
+            <a href="#offer" class="href-reset footer__href">
+              Договор оферты
             </a>
           </li>
-          <li class="social__item">
-            <a href="https://www.instagram.com/" class="social-href">
-              <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.1074 12.5C10.1074 13.8214 11.1786 14.8926 12.5 14.8926C13.8214 14.8926 14.8926 13.8214 14.8926 12.5C14.8926 11.1786 13.8214 10.1074 12.5 10.1074C11.1786 10.1074 10.1074 11.1786 10.1074 12.5Z"
-                  fill="#999999" />
-                <path
-                  d="M6.9046 8.26691C7.01962 7.95525 7.2031 7.67316 7.44152 7.4416C7.67307 7.20319 7.95498 7.0197 8.26683 6.90469C8.51974 6.80646 8.89969 6.68954 9.59949 6.65768C10.3565 6.62316 10.5835 6.61572 12.5 6.61572C14.4167 6.61572 14.6437 6.62297 15.4005 6.65749C16.1003 6.68954 16.4804 6.80646 16.7332 6.90469C17.045 7.0197 17.3271 7.20319 17.5585 7.4416C17.7969 7.67316 17.9804 7.95506 18.0956 8.26691C18.1938 8.51983 18.3107 8.89996 18.3426 9.59977C18.3771 10.3566 18.3846 10.5836 18.3846 12.5003C18.3846 14.4168 18.3771 14.6438 18.3426 15.4008C18.3107 16.1006 18.1938 16.4805 18.0956 16.7334C17.9804 17.0453 17.7971 17.3272 17.5587 17.5588C17.3271 17.7972 17.0452 17.9807 16.7334 18.0957C16.4804 18.1941 16.1003 18.311 15.4005 18.3429C14.6437 18.3774 14.4169 18.3846 12.5002 18.3846C10.5833 18.3846 10.3563 18.3774 9.59969 18.3429C8.89988 18.311 8.51974 18.1941 8.26683 18.0957C7.64084 17.8542 7.14607 17.3594 6.9046 16.7334C6.80637 16.4805 6.68945 16.1006 6.65741 15.4008C6.62289 14.6438 6.61564 14.4168 6.61564 12.5003C6.61564 10.5836 6.62289 10.3566 6.65741 9.59977C6.68926 8.89996 6.80618 8.51983 6.9046 8.26691ZM12.5 16.1858C14.5357 16.1858 16.186 14.5358 16.186 12.5001C16.186 10.4644 14.5357 8.81432 12.5 8.81432C10.4645 8.81432 8.81424 10.4644 8.81424 12.5001C8.81424 14.5358 10.4645 16.1858 12.5 16.1858ZM8.66852 9.52996C9.14421 9.52996 9.52988 9.1443 9.52988 8.6686C9.52988 8.19291 9.14421 7.80724 8.66852 7.80724C8.19283 7.80724 7.80716 8.19291 7.80716 8.6686C7.80735 9.1443 8.19283 9.52996 8.66852 9.52996Z"
-                  fill="#999999" />
-                <path
-                  d="M12.5 0C19.4025 0 25 5.5975 25 12.5C25 19.4025 19.4025 25 12.5 25C5.5975 25 0 19.4025 0 12.5C0 5.5975 5.5975 0 12.5 0ZM5.36556 15.4593C5.40028 16.2233 5.52177 16.745 5.69916 17.2016C6.07204 18.1658 6.83422 18.928 7.79839 19.3008C8.25481 19.4782 8.77666 19.5995 9.54056 19.6344C10.306 19.6693 10.5505 19.6777 12.4998 19.6777C14.4493 19.6777 14.6936 19.6693 15.4593 19.6344C16.2231 19.5995 16.745 19.4782 17.2014 19.3008C17.6805 19.1206 18.1143 18.8381 18.4729 18.4729C18.8379 18.1145 19.1204 17.6805 19.3007 17.2016C19.478 16.7452 19.5995 16.2233 19.6342 15.4594C19.6695 14.6938 19.6777 14.4493 19.6777 12.5C19.6777 10.5507 19.6695 10.3062 19.6344 9.54075C19.5997 8.77666 19.4784 8.255 19.301 7.79839C19.1208 7.31945 18.8381 6.88553 18.4729 6.52714C18.1145 6.16188 17.6805 5.8794 17.2016 5.69916C16.745 5.52177 16.2233 5.40047 15.4593 5.36556C14.6938 5.33066 14.4493 5.32227 12.5 5.32227C10.5507 5.32227 10.3062 5.33066 9.54075 5.36575C8.77666 5.40047 8.255 5.52177 7.79839 5.69897C7.31945 5.87921 6.88553 6.16188 6.52695 6.52714C6.16188 6.88572 5.87921 7.31945 5.69916 7.79839C5.52158 8.255 5.40028 8.77666 5.36537 9.54075C5.33047 10.3062 5.32227 10.5507 5.32227 12.5C5.32227 14.4493 5.33047 14.6938 5.36556 15.4593Z"
-                  fill="#999999" />
-              </svg>
+          <li class="footer__item">
+            <a href="#workagreement" class="href-reset footer__href">
+              Договор подряда
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#Confidentiality" class="href-reset footer__href">
+              Конфиденциальность
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#Partnership" class="href-reset footer__href">
+              Партнёрское соглашение
             </a>
           </li>
         </ul>
+        <div class="footer__social--div">
+          <a href="https://ok.ru/" class="footer__social2 footer__social">
+            <svg class="footer__social1" width="60" height="60" viewbox="0 0 60 60" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M25.7054 19.9812C25.7054 22.4546 27.7105 24.4598 30.1838 24.4598C32.6572 24.4598 34.6623 22.4546 34.6623 19.9812C34.6623 17.5079 32.6572 15.5028 30.1838 15.5028C27.7105 15.5028 25.7054 17.5079 25.7054 19.9812Z"
+                fill="#666666" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M30 60C46.5686 60 60 46.5685 60 30C60 13.4315 46.5686 0 30 0C13.4314 0 0 13.4315 0 30C0 46.5685 13.4314 60 30 60ZM19.35 19.9811C19.35 13.9978 24.2004 9.14729 30.1838 9.14729C36.1673 9.14729 41.0176 13.9978 41.0176 19.9811C41.0176 25.9645 36.1673 30.8154 30.1838 30.8154C24.2004 30.8154 19.35 25.9645 19.35 19.9811ZM41.0823 36.3881C40.9448 36.4983 38.3457 38.5522 34.0085 39.4358L40.5554 45.9243C41.7067 47.0738 41.7081 48.9389 40.5586 50.0902C39.4091 51.2414 37.5444 51.2432 36.3927 50.0935L30.0368 43.904L24.2639 50.0536C23.6859 50.6532 22.9149 50.9547 22.1431 50.9547C21.407 50.9547 20.6703 50.6808 20.0986 50.1296C18.9274 49.0003 18.8935 47.1355 20.0228 45.9643L26.2369 39.4701C21.7782 38.6073 19.0718 36.4998 18.9324 36.3881C17.6633 35.3702 17.4594 33.5163 18.4772 32.247C19.4949 30.9778 21.3487 30.7739 22.6182 31.7916C22.645 31.8133 25.4756 33.9398 30.0366 33.9429C34.5977 33.9398 37.3698 31.8133 37.3966 31.7916C38.666 30.7739 40.5198 30.9778 41.5375 32.247C42.5553 33.5163 42.3515 35.3702 41.0823 36.3881Z"
+                fill="#666666" />
+            </svg>
+          </a>
+          <a href="https://vk.com/" class="footer__social">
+            <svg class="footer__social1" width="60" height="60" viewbox="0 0 60 60" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M30 0C13.432 0 0 13.4314 0 30C0 46.5686 13.432 60 30 60C46.568 60 60 46.5686 60 30C60 13.4314 46.568 0 30 0ZM45.2176 33.2446C46.6159 34.6103 48.0951 35.8957 49.3504 37.4026C49.9065 38.0692 50.4307 38.7585 50.8297 39.5337C51.3993 40.6392 50.8849 41.8515 49.8954 41.9171L43.7494 41.9159C42.162 42.0473 40.8988 41.4071 39.8339 40.3218C38.9837 39.457 38.195 38.5332 37.3762 37.6389C37.0416 37.2718 36.6893 36.9262 36.2695 36.6543C35.4316 36.1093 34.7036 36.2762 34.2236 37.1515C33.7344 38.0421 33.6227 39.0292 33.5761 40.0205C33.5092 41.4697 33.0721 41.8484 31.618 41.9165C28.5109 42.062 25.5628 41.5906 22.8227 40.0241C20.4055 38.6425 18.5346 36.6924 16.9043 34.4845C13.7297 30.1805 11.2984 25.4566 9.11386 20.597C8.6222 19.5026 8.98189 18.917 10.1893 18.8943C12.1952 18.8557 14.2011 18.8606 16.2071 18.8925C17.0234 18.9054 17.5636 19.3725 17.8772 20.1428C18.9612 22.8098 20.2901 25.3473 21.9554 27.7007C22.3992 28.3274 22.8522 28.9522 23.4973 29.3948C24.2093 29.8834 24.7519 29.7219 25.0877 28.9271C25.3025 28.4219 25.3952 27.8817 25.4418 27.3404C25.6014 25.486 25.6205 23.6323 25.3442 21.7854C25.1724 20.6296 24.5224 19.8832 23.3702 19.6647C22.7834 19.5536 22.8694 19.3363 23.1548 19.0011C23.6501 18.4217 24.1142 18.0632 25.0416 18.0632L31.9857 18.062C33.0801 18.2768 33.3256 18.7679 33.4742 19.8703L33.4803 27.5871C33.4674 28.0137 33.6945 29.2782 34.4606 29.5574C35.0744 29.76 35.4795 29.2677 35.8465 28.8792C37.5118 27.112 38.6983 25.0263 39.7608 22.8675C40.2298 21.9155 40.6343 20.9303 41.0271 19.9433C41.3193 19.2135 41.7735 18.8544 42.5972 18.8667L49.2841 18.8747C49.4811 18.8747 49.6812 18.8765 49.8764 18.9103C51.0034 19.103 51.3121 19.5879 50.9635 20.6873C50.4147 22.4145 49.3485 23.8533 48.3063 25.2958C47.1892 26.8401 45.9977 28.3304 44.8917 29.8815C43.8752 31.2994 43.9556 32.0133 45.2176 33.2446Z"
+                fill="#666666" />
+            </svg>
+          </a>
+        </div>
       </div>
-    </div>
+      <div class="footter__block2">
+        <h2 class="footer__header">
+          Оставить заявку
+        </h2>
+        <input class="footer__input footer__input--name" type="text" placeholder="Фамилия, имя и отчество*">
+        <input class="footer__input footer__input--email" type="email" placeholder="Email*">
+        <textarea class="footer__input footer__input--massage" placeholder="Сообщение"></textarea>
+        <div class="footer__btn">
+          <button class="btn-reset footer_button">
+            Отправить данные
+          </button>
+        </div>
+      </div>
+      <div class="footter__block3">
+        <p>
+          Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта:
+          разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким
+          образом, консультация
+          с широким активом обеспечивает широкому кругу (специалистов) участие
+          в формировании стандартных подходов.
+        </p>
+      </div>
+    </section>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="dist/accordion.min.js"></script>
+  <script>new Accordion('.accordion-container');</script>
 </body>
 
 </html>
