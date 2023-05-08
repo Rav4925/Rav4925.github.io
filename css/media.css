@@ -967,14 +967,10 @@
     margin-bottom: 21px;
   }
 
-  .footer__btn{
-    padding-left: 55px;
-  }
-
   .footer_button {
     padding: 12px 28px;
     font: 700 12px / 14.63px 'Montserrat';
-    margin-right: auto;
+    margin-right: 0;
     border-radius: 8px;
   }
 
