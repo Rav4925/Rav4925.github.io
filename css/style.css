@@ -128,7 +128,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header__h1 {
-  visibility: hidden;
+  display: none;
 }
 
 .container__header {
